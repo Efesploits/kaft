@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAF Tarım — Gübre ve Tohum</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF7; --bg2:#F1F1EC; --ink:#131511; --ink2:#5A5E56;
+  --line:#E1E1DA; --card:#FFFFFF; --accent:#2E7D32; --accent-ink:#FFFFFF;
+  --shadow:0 10px 30px rgba(19,21,17,.07);
+}
+[data-theme="dark"]{
+  --bg:#0F110E; --bg2:#161813; --ink:#F2F2EC; --ink2:#A2A69B;
+  --line:#26291F; --card:#171A14; --accent:#7BC67E; --accent-ink:#0F110E;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  background:var(--bg); color:var(--ink);
+  transition:background .35s ease,color .35s ease;
+  line-height:1.6;
+}
+::selection{background:var(--accent);color:var(--accent-ink)}
+h1,h2,h3{font-family:'Archivo Expanded','Archivo',sans-serif;line-height:1.1}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- HEADER ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 4vw;
+  background:color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.02em}
+.logo svg{width:38px;height:38px;flex:none}
+.logo .lg-name{font-family:'Archivo Expanded',sans-serif;font-size:1.05rem;text-transform:uppercase}
+.logo .lg-name span{color:var(--accent);text-transform:lowercase}
+.logo-icon{height:42px;width:auto;border-radius:11px;display:block;flex:none}
+nav{display:flex;align-items:center;gap:28px}
+nav a.navlink{
+  font-size:.86rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--ink2);transition:color .2s;
+}
+nav a.navlink:hover{color:var(--accent)}
+.cta{
+  background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:999px;
+  font-size:.86rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  transition:background .2s,transform .2s;
+}
+.cta:hover{background:var(--accent);color:var(--accent-ink);transform:translateY(-1px)}
+.toggles{display:flex;align-items:center;gap:10px}
+.tgl{
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  border-radius:999px;padding:8px 14px;font:inherit;font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:border-color .2s,background .2s;
+}
+.tgl:hover{border-color:var(--accent)}
+#menuBtn{display:none}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:4vw;
+  align-items:center;padding:130px 6vw 60px;position:relative;overflow:hidden;
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--bg) 90%, transparent) 0%, color-mix(in srgb, var(--bg) 78%, transparent) 45%, color-mix(in srgb, var(--bg) 94%, transparent) 100%),
+    url("https://images.unsplash.com/photo-1719760665423-c07ba150397b?fm=jpg&q=80&w=2400&auto=format&fit=crop");
+  background-size:cover;
+  background-position:center 55%;
+  background-repeat:no-repeat;
+  transition:background-image .35s ease;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4.4rem);font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin-top:24px;max-width:560px;color:var(--ink2);font-size:1.06rem}
+.hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn-ghost{
+  border:1.5px solid var(--ink);border-radius:999px;padding:12px 26px;
+  font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;
+  transition:background .2s,color .2s;
+}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn-solid{
+  background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:12px 26px;
+  font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;
+  transition:filter .2s,transform .2s;
+}
+.btn-solid:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.hero-stats{margin-top:52px;display:flex;gap:44px;flex-wrap:wrap}
+.stat b{display:block;font-family:'Archivo Expanded',sans-serif;font-size:1.9rem;color:var(--ink)}
+.stat span{font-size:.82rem;color:var(--ink2);text-transform:uppercase;letter-spacing:.08em}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:min(420px,100%);height:auto}
+.wheat-stroke{stroke:var(--ink);transition:stroke .35s}
+.wheat-accent{stroke:var(--accent);fill:none;transition:stroke .35s}
+
+/* ---------- AÇILIŞ ANİMASYONLARI ---------- */
+/* Başlık: soldan kayarak gelir */
+@keyframes slideFromLeft{
+  from{opacity:0;transform:translateX(-70px)}
+  to{opacity:1;transform:translateX(0)}
+}
+/* Detay yazı: yumuşakça belirir */
+@keyframes softAppear{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.hero .eyebrow{opacity:0;animation:softAppear .7s ease-out .15s forwards}
+.hero h1{opacity:0;animation:slideFromLeft .9s cubic-bezier(.22,1,.36,1) .35s forwards}
+.hero>div>p{opacity:0;animation:softAppear 1s ease-out 1.05s forwards}
+.hero-actions{opacity:0;animation:softAppear .8s ease-out 1.5s forwards}
+.hero-stats{opacity:0;animation:softAppear .8s ease-out 1.75s forwards}
+
+/* Bitki: topraktan doğar, gövde uzar, yapraklar açılır */
+@keyframes drawLine{to{stroke-dashoffset:0}}
+@keyframes leafGrow{
+  0%{opacity:0;transform:scale(0)}
+  70%{opacity:1;transform:scale(1.08)}
+  100%{opacity:1;transform:scale(1)}
+}
+@keyframes seedPop{
+  0%{opacity:0;transform:scale(0)}
+  60%{opacity:1;transform:scale(1.5)}
+  100%{opacity:1;transform:scale(1)}
+}
+.w-ground{stroke-dasharray:180;stroke-dashoffset:180;animation:drawLine .6s ease-out .3s forwards}
+.w-stem{stroke-dasharray:320;stroke-dashoffset:320;animation:drawLine 1.6s ease-in-out .8s forwards}
+.w-seed{opacity:0;transform-box:view-box;transform-origin:150px 350px;animation:seedPop .5s ease-out .55s forwards}
+.w-leaf{opacity:0;transform-box:view-box;animation:leafGrow .7s cubic-bezier(.34,1.56,.64,1) forwards}
+.w-leaf-1{transform-origin:150px 250px;animation-delay:1.5s}
+.w-leaf-2{transform-origin:150px 185px;animation-delay:1.9s}
+.w-leaf-3{transform-origin:150px 120px;animation-delay:2.3s}
+.w-top{stroke-dasharray:70;stroke-dashoffset:70;animation:drawLine .7s ease-out 2.6s forwards}
+
+@media (prefers-reduced-motion:reduce){
+  .hero .eyebrow,.hero h1,.hero>div>p,.hero-actions,.hero-stats,
+  .w-ground,.w-stem,.w-seed,.w-leaf,.w-top{
+    animation:none;opacity:1;transform:none;stroke-dashoffset:0;
+  }
+}
+
+/* ---------- SECTIONS ---------- */
+section{padding:100px 6vw}
+.sec-head{max-width:760px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.8rem);text-transform:uppercase;font-weight:800}
+.sec-head p{margin-top:14px;color:var(--ink2)}
+.alt{background:var(--bg2)}
+
+/* product rows */
+.prod{
+  display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:center;
+  padding:44px 0;border-top:1px solid var(--line);
+}
+.prod:last-child{border-bottom:1px solid var(--line)}
+.prod-img{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;
+  height:280px;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);overflow:hidden;position:relative;
+}
+.prod-img svg{width:60%;height:60%}
+.prod-img .ph-note{
+  position:absolute;bottom:10px;right:14px;font-size:.68rem;color:var(--ink2);
+  letter-spacing:.06em;text-transform:uppercase;
+}
+.prod-body .tag{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:4px 12px;margin-bottom:14px;
+}
+.prod-body h3{font-size:1.5rem;text-transform:uppercase}
+.prod-body p{margin-top:10px;color:var(--ink2)}
+.why{margin-top:16px;display:grid;gap:8px}
+.why li{
+  list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:.95rem;
+}
+.why li::before{content:"✓";color:var(--accent);font-weight:800;flex:none}
+
+/* seeds grid */
+.seed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.seed-card{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;
+  box-shadow:var(--shadow);transition:transform .25s,border-color .25s;
+}
+.seed-card:hover{transform:translateY(-5px);border-color:var(--accent)}
+.seed-card svg{width:56px;height:56px;margin-bottom:16px}
+.seed-card h3{font-size:1.1rem;text-transform:uppercase;margin-bottom:8px}
+.seed-card p{color:var(--ink2);font-size:.93rem}
+
+/* biz */
+.founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.f-card{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);
+}
+.f-avatar{
+  width:76px;height:76px;border-radius:50%;background:var(--bg2);border:1.5px dashed var(--line);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1.3rem;color:var(--accent);
+}
+.f-card h3{font-size:1.15rem}
+.f-card .role{color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin:4px 0 16px}
+.f-card ul{list-style:none;display:grid;gap:8px;color:var(--ink2);font-size:.94rem}
+.f-card ul li{display:flex;gap:10px;align-items:center}
+.f-card ul li svg{width:16px;height:16px;flex:none;stroke:var(--accent)}
+
+/* contact */
+#iletisim .wrap{
+  background:var(--ink);color:var(--bg);border-radius:28px;padding:64px 6vw;
+  display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
+}
+[data-theme="dark"] #iletisim .wrap{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+#iletisim h2{font-size:clamp(1.8rem,3vw,2.6rem);text-transform:uppercase}
+#iletisim p{margin-top:12px;opacity:.75}
+.contact-list{display:grid;gap:16px;font-size:1rem}
+.contact-list a{display:flex;gap:12px;align-items:center;transition:color .2s}
+.contact-list a:hover{color:var(--accent)}
+.contact-list svg{width:20px;height:20px;stroke:var(--accent);flex:none}
+
+footer{padding:34px 6vw;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink2);font-size:.85rem;border-top:1px solid var(--line)}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-logo{height:22px;width:auto;border-radius:6px;display:block;flex:none}
+.footer-name{font-family:'Archivo Expanded',sans-serif;font-weight:800;text-transform:uppercase;color:var(--ink)}
+.footer-name span{color:var(--accent);text-transform:lowercase}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:110px}
+  .hero-art{order:-1}
+  .hero-art svg{width:min(260px,70%)}
+  .prod{grid-template-columns:1fr}
+  #iletisim .wrap{grid-template-columns:1fr}
+  nav#mainNav{
+    position:fixed;top:66px;right:0;left:0;flex-direction:column;align-items:stretch;
+    background:var(--bg);border-bottom:1px solid var(--line);padding:14px 6vw 20px;gap:4px;
+    display:none;box-shadow:var(--shadow);
+  }
+  nav#mainNav.open{display:flex}
+  nav#mainNav a.navlink{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
+  nav#mainNav .cta{margin-top:14px;text-align:center;padding:14px 20px}
+  #menuBtn{display:inline-flex}
+}
+
+/* ---------- TELEFON (≤600px) ---------- */
+@media (max-width:600px){
+  header{padding:10px 4vw}
+  .logo svg{width:32px;height:32px}
+  .logo .lg-name{font-size:.95rem}
+  .logo-icon{height:34px}
+  .tgl{padding:8px 12px;min-height:40px}
+  nav#mainNav{top:58px}
+
+  .hero{padding:96px 5vw 48px;gap:8px;min-height:auto}
+  .hero-art{margin-bottom:6px}
+  .hero-art svg{width:min(190px,58%)}
+  .hero h1{font-size:clamp(1.9rem,8.5vw,2.6rem)}
+  .hero p{font-size:.98rem}
+  .hero-actions{margin-top:26px;width:100%}
+  .btn-solid,.btn-ghost,.cta{width:100%;text-align:center;padding:14px 20px}
+  .hero-stats{margin-top:36px;gap:22px 32px}
+  .stat b{font-size:1.5rem}
+
+  section{padding:64px 5vw}
+  .sec-head{margin-bottom:36px}
+  .prod{gap:20px;padding:32px 0}
+  .prod-img{height:200px}
+  .prod-body h3{font-size:1.3rem}
+  .seed-grid{gap:16px}
+  .seed-card{padding:22px}
+  .founders{gap:16px;margin-top:28px}
+  .f-card{padding:24px}
+  #iletisim .wrap{padding:40px 6vw;border-radius:20px;gap:28px}
+  .contact-list{font-size:.94rem;word-break:break-word}
+  footer{flex-direction:column;gap:6px;text-align:center;align-items:center}
+}
+
+/* dokunmatik cihazlarda hover kaymalarını kapat */
+@media (hover:none){
+  .seed-card:hover{transform:none}
+  .cta:hover,.btn-solid:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <a class="logo" href="#top" aria-label="KAF Tarım">
+    <img src="data:image/png;base64,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" alt="" class="logo-icon">
+    <span class="lg-name">KAF<span>tarım</span></span>
+  </a>
+
+  <nav id="mainNav">
+    <a class="navlink" href="#ilaclar" data-i18n="nav_products">İlaçlarımız</a>
+    <a class="navlink" href="#tohumlar" data-i18n="nav_seeds">Tohumlarımız</a>
+    <a class="navlink" href="#biz" data-i18n="nav_us">Biz</a>
+    <a class="cta" href="#iletisim" data-i18n="nav_contact">Bize Ulaşın</a>
+  </nav>
+
+  <div class="toggles">
+    <button class="tgl" id="langBtn" aria-label="Dil değiştir">EN</button>
+    <button class="tgl" id="themeBtn" aria-label="Tema değiştir">◐</button>
+    <button class="tgl" id="menuBtn" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<!-- ============ HERO / GİRİŞ ============ -->
+<section class="hero" id="top">
+  <div>
+    <span class="eyebrow" data-i18n="hero_eyebrow">Antalya · 2010'dan beri</span>
+    <h1 data-i18n="hero_title">Toprağın <em>Gücü</em>, Çiftçinin Yanında</h1>
+    <p data-i18n="hero_text">2005 yılından beri Türk tarımının farklı dallarında uzmanlaşan kurucularımız, en kaliteli ithal ve yerli ürünleri en iyi teknik destekle bayilerimize ve çiftçilerimize ulaştırmak için 2010 yılında KAF TARIM'ı Antalya'da kurdu. Ürünlerimizi dünyanın birçok yerinde uzun ve titiz araştırmalar sonucunda belirliyor; geniş dağıtım ağımız, kalitemiz ve güvenilirliğimizle Türk çiftçisinin yanında yürüyoruz.</p>
+    <div class="hero-actions">
+      <a class="btn-solid" href="#ilaclar" data-i18n="hero_btn1">Ürünleri Keşfet</a>
+      <a class="btn-ghost" href="#iletisim" data-i18n="hero_btn2">Bize Ulaşın</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>2010</b><span data-i18n="stat1">Kuruluş yılı</span></div>
+      <div class="stat"><b>20+</b><span data-i18n="stat2">Yıllık sektör deneyimi</span></div>
+      <div class="stat"><b>%100</b><span data-i18n="stat3">Kalite odaklı seçim</span></div>
+    </div>
+  </div>
+
+  <div class="hero-art" aria-hidden="true">
+    <!-- Başak / yaprak çizimi — açılışta topraktan büyür -->
+    <svg viewBox="0 0 300 420" fill="none">
+      <!-- 1) toprak çizgisi -->
+      <path class="wheat-stroke w-ground" d="M60 410h180" stroke-width="4" stroke-linecap="round"/>
+      <!-- 2) tohum belirir -->
+      <circle class="w-seed" cx="150" cy="350" r="6" fill="var(--accent)"/>
+      <!-- 3) gövde yukarı doğru uzar -->
+      <path class="wheat-stroke w-stem" d="M150 410V90" stroke-width="4" stroke-linecap="round"/>
+      <!-- 4) yapraklar alttan üste sırayla açılır -->
+      <g class="wheat-accent w-leaf w-leaf-1" stroke-width="4" stroke-linecap="round">
+        <path d="M150 250c-36-8-50-30-52-54 25 2 48 19 52 54Z"/>
+        <path d="M150 250c36-8 50-30 52-54-25 2-48 19-52 54Z"/>
+      </g>
+      <g class="wheat-accent w-leaf w-leaf-2" stroke-width="4" stroke-linecap="round">
+        <path d="M150 185c-38-8-53-32-55-58 26 2 51 20 55 58Z"/>
+        <path d="M150 185c38-8 53-32 55-58-26 2-51 20-55 58Z"/>
+      </g>
+      <g class="wheat-accent w-leaf w-leaf-3" stroke-width="4" stroke-linecap="round">
+        <path d="M150 120c-40-8-56-34-58-62 28 2 54 22 58 62Z"/>
+        <path d="M150 120c40-8 56-34 58-62-28 2-54 22-58 62Z"/>
+      </g>
+      <!-- 5) en üstteki başak filizleri -->
+      <path class="wheat-stroke w-top" d="M150 90c0-28 10-46 26-58" stroke-width="4" stroke-linecap="round"/>
+      <path class="wheat-stroke w-top" d="M150 90c0-28-10-46-26-58" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ İLAÇLARIMIZ ============ -->
+<section id="ilaclar" class="alt">
+  <div class="sec-head reveal">
+    <span class="eyebrow" data-i18n="p_eyebrow">Bitki Besleme &amp; Koruma</span>
+    <h2 data-i18n="p_title">İlaçlarımız</h2>
+    <p data-i18n="p_text">Dünyanın dört bir yanında yapılan titiz araştırmalar sonucunda seçilen, ithal ve yerli en kaliteli ürün grupları. Her ürün, çiftçimize en iyi teknik destekle birlikte sunulur.</p>
+  </div>
+
+  <!-- Ürün fotoğraflarını .prod-img kutularına ekleyebilirsiniz -->
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="30" y="8" width="40" height="14" rx="3" stroke="var(--ink)" stroke-width="3"/><path d="M34 22h32l8 20v76a8 8 0 0 1-8 8H34a8 8 0 0 1-8-8V42l8-20Z" stroke="var(--ink)" stroke-width="3"/><rect x="34" y="58" width="32" height="34" rx="4" fill="var(--accent)" opacity=".85"/></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_amino">Aminoasit</span>
+      <h3>Marlon 10</h3>
+      <p data-i18n="marlon_p">Enzimatik hidroliz yoluyla elde edilmiş, L formundaki bitkisel aminoasitler, enzimler ve yüksek miktarda organik maddeden oluşan bitkisel menşeili organik gübre.</p>
+      <ul class="why">
+        <li data-i18n="marlon_w1">D formundaki inaktif aminoasitleri içermez — bitki tarafından tamamı kullanılır</li>
+        <li data-i18n="marlon_w2">Stres koşullarında (don, kuraklık, nakil) bitkiyi hızla toparlar</li>
+        <li data-i18n="marlon_w3">Tamamen bitkisel menşeili ve organik yapıdadır</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="38" y="6" width="24" height="16" rx="3" stroke="var(--ink)" stroke-width="3"/><path d="M40 22h20c14 10 20 24 20 40v48a12 12 0 0 1-12 12H32a12 12 0 0 1-12-12V62c0-16 6-30 20-40Z" stroke="var(--ink)" stroke-width="3"/><path d="M32 76c12 8 24-8 36 0" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/><path d="M32 92c12 8 24-8 36 0" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_soil">Toprak Sağlığı</span>
+      <h3>Fixel</h3>
+      <p data-i18n="fixel_p">Bitkisel menşeili sıvı gübre. Toprak işleme sonucu topraklardaki karbonun yaklaşık %50'si kaybolur; Fixel düzenli uygulamayla toprak karbonunu yeniden çoğaltır.</p>
+      <ul class="why">
+        <li data-i18n="fixel_w1">Toprağın organik karbon dengesini geri kazandırır</li>
+        <li data-i18n="fixel_w2">Toprak canlılığını ve su tutma kapasitesini artırır</li>
+        <li data-i18n="fixel_w3">Uzun vadede verim ve toprak yapısını iyileştirir</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><path d="M50 10C64 34 82 52 82 78a32 32 0 1 1-64 0c0-26 18-44 32-68Z" stroke="var(--ink)" stroke-width="3"/><path d="M40 84a12 14 0 0 0 12 14" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_org">Organik Düzenleyici</span>
+      <h3>Nutriorgan</h3>
+      <p data-i18n="nutri_p">Yapraktan uygulanabilen organik toprak düzenleyici. İz elementlerin, yaprak gübrelerinin ve sistemik etkili ürünlerin yapraklar tarafından daha fazla alınmasını sağlar.</p>
+      <ul class="why">
+        <li data-i18n="nutri_w1">Birlikte uygulanan ürünlerin etkinliğini ve yarayışlılığını artırır</li>
+        <li data-i18n="nutri_w2">Yapraktan emilimi güçlendirir, uygulama israfını azaltır</li>
+        <li data-i18n="nutri_w3">Organik yapısıyla toprağı ve bitkiyi destekler</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="24" y="26" width="52" height="92" rx="10" stroke="var(--ink)" stroke-width="3"/><rect x="36" y="8" width="28" height="18" rx="3" stroke="var(--ink)" stroke-width="3"/><text x="50" y="82" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="20" fill="var(--accent)">PK</text></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_pk">Fosfor · Potasyum</span>
+      <h3>Fitosol</h3>
+      <p data-i18n="fito_p">Yüksek oranda fosfor ve potasyum içeren sistemik PK çözeltisi. İçeriğindeki fosfor, fosforos asitten elde edilen fosfit iyonları halindedir.</p>
+      <ul class="why">
+        <li data-i18n="fito_w1">Fosforik asit kaynaklı ürünlerden çok daha etkilidir</li>
+        <li data-i18n="fito_w2">Sistemik yapısıyla bitkinin tamamında hızla taşınır</li>
+        <li data-i18n="fito_w3">Kök gelişimini ve bitki savunmasını güçlendirir</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><circle cx="50" cy="70" r="40" stroke="var(--ink)" stroke-width="3"/><text x="50" y="78" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="22" fill="var(--accent)">Ca</text><path d="M50 10v10M50 120v-10M10 70h10M90 70H80" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_ca">Kalsiyum</span>
+      <h3>Polical</h3>
+      <p data-i18n="poli_p">Benzoik, asetik, bütrik, sitrik, malik ve karboksilik asit gruplarının yanında L tipi aminoasitler de içeren kalsiyum klorür çözeltisi.</p>
+      <ul class="why">
+        <li data-i18n="poli_w1">Alınabilirliği ve yarayışlılığı en yüksek kalsiyum formudur</li>
+        <li data-i18n="poli_w2">Meyve kalitesini, sertliğini ve raf ömrünü artırır</li>
+        <li data-i18n="poli_w3">Çiçek burnu çürüklüğü gibi kalsiyum eksikliklerini önler</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="prod reveal">
+    <div class="prod-img">
+      <svg viewBox="0 0 100 130" fill="none" aria-hidden="true"><path d="M30 14h40l10 26v66a12 12 0 0 1-12 12H32a12 12 0 0 1-12-12V40l10-26Z" stroke="var(--ink)" stroke-width="3"/><text x="50" y="82" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="20" fill="var(--accent)">Cu</text></svg>
+      <span class="ph-note" data-i18n="ph">Fotoğraf alanı</span>
+    </div>
+    <div class="prod-body">
+      <span class="tag" data-i18n="t_cu">Bakır</span>
+      <h3>Phylon Copper</h3>
+      <p data-i18n="phy_p">Bitkinin bakır ihtiyacını karşılayan, alınabilirliği yüksek bakır çözeltisi. Güvenli ve kaliteli içeriğiyle bitki sağlığını destekler.</p>
+      <ul class="why">
+        <li data-i18n="phy_w1">Bitkinin doğal savunma mekanizmasını güçlendirir</li>
+        <li data-i18n="phy_w2">Bakır eksikliğine bağlı gelişim bozukluklarını giderir</li>
+        <li data-i18n="phy_w3">Titizlikle seçilmiş, güvenilir formülasyon</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ TOHUMLARIMIZ ============ -->
+<section id="tohumlar">
+  <div class="sec-head reveal">
+    <span class="eyebrow" data-i18n="s_eyebrow">Yüksek Verim</span>
+    <h2 data-i18n="s_title">Tohumlarımız</h2>
+    <p data-i18n="s_text">Antalya'nın sera ve tarla koşullarına uygun, çimlenme gücü yüksek, hastalıklara dayanıklı tohum çeşitleri. (Bu bölümdeki çeşitleri ve açıklamaları kendi ürün listenize göre düzenleyebilirsiniz.)</p>
+  </div>
+
+  <div class="seed-grid">
+    <div class="seed-card reveal">
+      <svg viewBox="0 0 60 60" fill="none" aria-hidden="true"><circle cx="30" cy="34" r="18" stroke="var(--ink)" stroke-width="3"/><path d="M30 16c-2-6 2-10 8-10-1 6-3 9-8 10Z" fill="var(--accent)"/></svg>
+      <h3 data-i18n="seed1_t">Domates</h3>
+      <p data-i18n="seed1_p">Sera ve açık tarlaya uygun, virüs dayanımlı, yüksek verimli çeşitler. Homojen meyve yapısı ve uzun raf ömrü.</p>
+    </div>
+    <div class="seed-card reveal">
+      <svg viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M26 14c-8 4-12 12-12 22 0 10 8 18 16 18s16-8 16-18c0-10-4-18-12-22" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><path d="M30 14V6" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/></svg>
+      <h3 data-i18n="seed2_t">Biber</h3>
+      <p data-i18n="seed2_p">Sivri, çarliston ve dolmalık tiplerde; erkenci, bol dallanan ve pazar değeri yüksek çeşit seçenekleri.</p>
+    </div>
+    <div class="seed-card reveal">
+      <svg viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M14 44C18 26 30 14 48 12c-2 18-14 30-32 34l-2-2Z" stroke="var(--ink)" stroke-width="3"/><path d="M20 40c8-2 16-10 20-20" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/></svg>
+      <h3 data-i18n="seed3_t">Salatalık</h3>
+      <p data-i18n="seed3_p">Kısa ve uzun tip hıyar çeşitleri; güçlü bitki yapısı, düzgün meyve formu ve yüksek toplam verim.</p>
+    </div>
+    <div class="seed-card reveal">
+      <svg viewBox="0 0 60 60" fill="none" aria-hidden="true"><circle cx="30" cy="32" r="20" stroke="var(--ink)" stroke-width="3"/><path d="M18 24c8 6 16 6 24 0M18 40c8-6 16-6 24 0" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/></svg>
+      <h3 data-i18n="seed4_t">Karpuz &amp; Kavun</h3>
+      <p data-i18n="seed4_p">Yüksek şeker oranı (brix), taşımaya dayanıklı kabuk yapısı ve homojen olgunlaşma sunan çeşitler.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BİZ ============ -->
+<section id="biz" class="alt">
+  <div class="sec-head reveal">
+    <span class="eyebrow" data-i18n="b_eyebrow">Kurucularımız</span>
+    <h2 data-i18n="b_title">Biz</h2>
+    <p data-i18n="b_text">2005'ten beri Türk tarımının içinde olan, gübre sektöründe uzmanlaşmış bir ekibiz. Aşağıdaki iletişim bilgilerini kendi bilgilerinizle doldurabilirsiniz.</p>
+  </div>
+
+  <div class="founders">
+    <!-- KURUCU 1 — bilgileri doldurun -->
+    <div class="f-card reveal">
+      <div class="f-avatar">K1</div>
+      <h3 data-i18n="f_name">[Kurucu Adı Soyadı]</h3>
+      <div class="role" data-i18n="f_role">Kurucu Ortak</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>[+90 5xx xxx xx xx]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>[eposta@kaftarim.com]</li>
+      </ul>
+    </div>
+    <!-- KURUCU 2 — bilgileri doldurun -->
+    <div class="f-card reveal">
+      <div class="f-avatar">K2</div>
+      <h3 data-i18n="f_name2">[Kurucu Adı Soyadı]</h3>
+      <div class="role" data-i18n="f_role">Kurucu Ortak</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>[+90 5xx xxx xx xx]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>[eposta@kaftarim.com]</li>
+      </ul>
+    </div>
+    <!-- KURUCU 3 — gerekirse silin veya çoğaltın -->
+    <div class="f-card reveal">
+      <div class="f-avatar">K3</div>
+      <h3 data-i18n="f_name3">[Kurucu Adı Soyadı]</h3>
+      <div class="role" data-i18n="f_role">Kurucu Ortak</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>[+90 5xx xxx xx xx]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>[eposta@kaftarim.com]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BİZE ULAŞIN ============ -->
+<section id="iletisim">
+  <div class="wrap reveal">
+    <div>
+      <span class="eyebrow" data-i18n="c_eyebrow">İletişim</span>
+      <h2 data-i18n="c_title">Bize Ulaşın</h2>
+      <p data-i18n="c_text">Ürünlerimiz, bayilik ve teknik destek için bize her zaman ulaşabilirsiniz.</p>
+    </div>
+    <div class="contact-list">
+      <a href="tel:+902423236214"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+90 (242) 323 62 14</a>
+      <a href="mailto:info@kaftarim.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@kaftarim.com</a>
+      <a href="https://maps.google.com/?q=Fener+Mah.+Tekelio%C4%9Flu+Cad.+Antalya" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="c_addr">Fener Mah. Tekelioğlu Cad. 1941 Sok. No:17, Muratpaşa / Antalya</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-brand"><img src="data:image/png;base64,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" alt="" class="footer-logo"><span class="footer-name">KAF<span>tarım</span></span> © <span id="year"></span> Gübre ve Tohum San. Ltd. Şti.</span>
+  <span data-i18n="footer">Antalya, Türkiye — Toprağın gücü, çiftçinin yanında.</span>
+</footer>
+
+<script>
+/* ============ ÇEVİRİ (TR / EN) ============ */
+const dict = {
+  tr:{
+    nav_products:"İlaçlarımız", nav_seeds:"Tohumlarımız", nav_us:"Biz", nav_contact:"Bize Ulaşın",
+    hero_eyebrow:"Antalya · 2010'dan beri",
+    hero_title:'Toprağın <em>Gücü</em>, Çiftçinin Yanında',
+    hero_text:"2005 yılından beri Türk tarımının farklı dallarında uzmanlaşan kurucularımız, en kaliteli ithal ve yerli ürünleri en iyi teknik destekle bayilerimize ve çiftçilerimize ulaştırmak için 2010 yılında KAF TARIM'ı Antalya'da kurdu. Ürünlerimizi dünyanın birçok yerinde uzun ve titiz araştırmalar sonucunda belirliyor; geniş dağıtım ağımız, kalitemiz ve güvenilirliğimizle Türk çiftçisinin yanında yürüyoruz.",
+    hero_btn1:"Ürünleri Keşfet", hero_btn2:"Bize Ulaşın",
+    stat1:"Kuruluş yılı", stat2:"Yıllık sektör deneyimi", stat3:"Kalite odaklı seçim",
+    p_eyebrow:"Bitki Besleme & Koruma", p_title:"İlaçlarımız",
+    p_text:"Dünyanın dört bir yanında yapılan titiz araştırmalar sonucunda seçilen, ithal ve yerli en kaliteli ürün grupları. Her ürün, çiftçimize en iyi teknik destekle birlikte sunulur.",
+    ph:"Fotoğraf alanı",
+    t_amino:"Aminoasit", t_soil:"Toprak Sağlığı", t_org:"Organik Düzenleyici", t_pk:"Fosfor · Potasyum", t_ca:"Kalsiyum", t_cu:"Bakır",
+    marlon_p:"Enzimatik hidroliz yoluyla elde edilmiş, L formundaki bitkisel aminoasitler, enzimler ve yüksek miktarda organik maddeden oluşan bitkisel menşeili organik gübre.",
+    marlon_w1:"D formundaki inaktif aminoasitleri içermez — bitki tarafından tamamı kullanılır",
+    marlon_w2:"Stres koşullarında (don, kuraklık, nakil) bitkiyi hızla toparlar",
+    marlon_w3:"Tamamen bitkisel menşeili ve organik yapıdadır",
+    fixel_p:"Bitkisel menşeili sıvı gübre. Toprak işleme sonucu topraklardaki karbonun yaklaşık %50'si kaybolur; Fixel düzenli uygulamayla toprak karbonunu yeniden çoğaltır.",
+    fixel_w1:"Toprağın organik karbon dengesini geri kazandırır",
+    fixel_w2:"Toprak canlılığını ve su tutma kapasitesini artırır",
+    fixel_w3:"Uzun vadede verim ve toprak yapısını iyileştirir",
+    nutri_p:"Yapraktan uygulanabilen organik toprak düzenleyici. İz elementlerin, yaprak gübrelerinin ve sistemik etkili ürünlerin yapraklar tarafından daha fazla alınmasını sağlar.",
+    nutri_w1:"Birlikte uygulanan ürünlerin etkinliğini ve yarayışlılığını artırır",
+    nutri_w2:"Yapraktan emilimi güçlendirir, uygulama israfını azaltır",
+    nutri_w3:"Organik yapısıyla toprağı ve bitkiyi destekler",
+    fito_p:"Yüksek oranda fosfor ve potasyum içeren sistemik PK çözeltisi. İçeriğindeki fosfor, fosforos asitten elde edilen fosfit iyonları halindedir.",
+    fito_w1:"Fosforik asit kaynaklı ürünlerden çok daha etkilidir",
+    fito_w2:"Sistemik yapısıyla bitkinin tamamında hızla taşınır",
+    fito_w3:"Kök gelişimini ve bitki savunmasını güçlendirir",
+    poli_p:"Benzoik, asetik, bütrik, sitrik, malik ve karboksilik asit gruplarının yanında L tipi aminoasitler de içeren kalsiyum klorür çözeltisi.",
+    poli_w1:"Alınabilirliği ve yarayışlılığı en yüksek kalsiyum formudur",
+    poli_w2:"Meyve kalitesini, sertliğini ve raf ömrünü artırır",
+    poli_w3:"Çiçek burnu çürüklüğü gibi kalsiyum eksikliklerini önler",
+    phy_p:"Bitkinin bakır ihtiyacını karşılayan, alınabilirliği yüksek bakır çözeltisi. Güvenli ve kaliteli içeriğiyle bitki sağlığını destekler.",
+    phy_w1:"Bitkinin doğal savunma mekanizmasını güçlendirir",
+    phy_w2:"Bakır eksikliğine bağlı gelişim bozukluklarını giderir",
+    phy_w3:"Titizlikle seçilmiş, güvenilir formülasyon",
+    s_eyebrow:"Yüksek Verim", s_title:"Tohumlarımız",
+    s_text:"Antalya'nın sera ve tarla koşullarına uygun, çimlenme gücü yüksek, hastalıklara dayanıklı tohum çeşitleri. (Bu bölümdeki çeşitleri ve açıklamaları kendi ürün listenize göre düzenleyebilirsiniz.)",
+    seed1_t:"Domates", seed1_p:"Sera ve açık tarlaya uygun, virüs dayanımlı, yüksek verimli çeşitler. Homojen meyve yapısı ve uzun raf ömrü.",
+    seed2_t:"Biber", seed2_p:"Sivri, çarliston ve dolmalık tiplerde; erkenci, bol dallanan ve pazar değeri yüksek çeşit seçenekleri.",
+    seed3_t:"Salatalık", seed3_p:"Kısa ve uzun tip hıyar çeşitleri; güçlü bitki yapısı, düzgün meyve formu ve yüksek toplam verim.",
+    seed4_t:"Karpuz & Kavun", seed4_p:"Yüksek şeker oranı (brix), taşımaya dayanıklı kabuk yapısı ve homojen olgunlaşma sunan çeşitler.",
+    b_eyebrow:"Kurucularımız", b_title:"Biz",
+    b_text:"2005'ten beri Türk tarımının içinde olan, gübre sektöründe uzmanlaşmış bir ekibiz. Aşağıdaki iletişim bilgilerini kendi bilgilerinizle doldurabilirsiniz.",
+    f_name:"[Kurucu Adı Soyadı]", f_name2:"[Kurucu Adı Soyadı]", f_name3:"[Kurucu Adı Soyadı]", f_role:"Kurucu Ortak",
+    c_eyebrow:"İletişim", c_title:"Bize Ulaşın",
+    c_text:"Ürünlerimiz, bayilik ve teknik destek için bize her zaman ulaşabilirsiniz.",
+    c_addr:"Fener Mah. Tekelioğlu Cad. 1941 Sok. No:17, Muratpaşa / Antalya",
+    footer:"Antalya, Türkiye — Toprağın gücü, çiftçinin yanında."
+  },
+  en:{
+    nav_products:"Our Products", nav_seeds:"Our Seeds", nav_us:"About Us", nav_contact:"Contact Us",
+    hero_eyebrow:"Antalya · Since 2010",
+    hero_title:'The <em>Power</em> of Soil, Beside the Farmer',
+    hero_text:"Our founders, specialized in various branches of Turkish agriculture since 2005, established KAF TARIM in Antalya in 2010 to deliver the highest-quality imported and domestic products to dealers and farmers with the best technical support. We select our products after long, meticulous research around the world, and stand by the Turkish farmer with our wide distribution network, quality and reliability.",
+    hero_btn1:"Explore Products", hero_btn2:"Contact Us",
+    stat1:"Founded", stat2:"Years of expertise", stat3:"Quality-driven selection",
+    p_eyebrow:"Plant Nutrition & Protection", p_title:"Our Products",
+    p_text:"The finest imported and domestic product groups, selected after meticulous research across the world. Every product comes with the best technical support for our farmers.",
+    ph:"Photo placeholder",
+    t_amino:"Amino Acid", t_soil:"Soil Health", t_org:"Organic Conditioner", t_pk:"Phosphorus · Potassium", t_ca:"Calcium", t_cu:"Copper",
+    marlon_p:"An organic fertilizer of plant origin, composed of L-form plant amino acids obtained via enzymatic hydrolysis, enzymes and a high amount of organic matter.",
+    marlon_w1:"Contains no inactive D-form amino acids — fully usable by the plant",
+    marlon_w2:"Quickly recovers plants under stress (frost, drought, transplanting)",
+    marlon_w3:"Entirely plant-based and organic",
+    fixel_p:"A liquid fertilizer of plant origin. Tillage causes soils to lose about 50% of their original carbon; regular Fixel application rebuilds soil carbon.",
+    fixel_w1:"Restores the soil's organic carbon balance",
+    fixel_w2:"Boosts soil life and water-holding capacity",
+    fixel_w3:"Improves long-term yield and soil structure",
+    nutri_p:"A foliar-applicable organic soil conditioner. Increases leaf uptake of trace elements, foliar fertilizers and systemic products.",
+    nutri_w1:"Boosts the efficiency of co-applied products",
+    nutri_w2:"Strengthens foliar absorption, reduces application waste",
+    nutri_w3:"Supports soil and plant with its organic structure",
+    fito_p:"A systemic PK solution rich in phosphorus and potassium. Its phosphorus is in phosphite-ion form derived from phosphorous acid.",
+    fito_w1:"Far more effective than phosphoric-acid-based products",
+    fito_w2:"Systemic — rapidly translocated throughout the plant",
+    fito_w3:"Strengthens root growth and plant defense",
+    poli_p:"A calcium chloride solution containing benzoic, acetic, butyric, citric, malic and carboxylic acid groups, plus L-type amino acids.",
+    poli_w1:"The most available and effective form of calcium",
+    poli_w2:"Improves fruit quality, firmness and shelf life",
+    poli_w3:"Prevents calcium deficiencies such as blossom-end rot",
+    phy_p:"A highly available copper solution meeting the plant's copper needs. Supports plant health with its safe, high-quality content.",
+    phy_w1:"Strengthens the plant's natural defense mechanism",
+    phy_w2:"Corrects growth disorders caused by copper deficiency",
+    phy_w3:"A meticulously selected, reliable formulation",
+    s_eyebrow:"High Yield", s_title:"Our Seeds",
+    s_text:"Seed varieties suited to Antalya's greenhouse and field conditions, with high germination power and disease resistance. (You can edit these varieties and descriptions to match your own catalogue.)",
+    seed1_t:"Tomato", seed1_p:"High-yield, virus-resistant varieties for greenhouse and open field. Uniform fruit and long shelf life.",
+    seed2_t:"Pepper", seed2_p:"Pointed, charleston and bell types; early, well-branching varieties with high market value.",
+    seed3_t:"Cucumber", seed3_p:"Short and long types; strong plant structure, uniform fruit shape and high total yield.",
+    seed4_t:"Watermelon & Melon", seed4_p:"Varieties offering high sugar content (brix), transport-resistant rind and uniform ripening.",
+    b_eyebrow:"Our Founders", b_title:"About Us",
+    b_text:"We are a team that has been part of Turkish agriculture since 2005, specialized in the fertilizer sector. Fill in the contact details below with your own information.",
+    f_name:"[Founder Name]", f_name2:"[Founder Name]", f_name3:"[Founder Name]", f_role:"Co-Founder",
+    c_eyebrow:"Contact", c_title:"Contact Us",
+    c_text:"Reach us anytime for our products, dealership and technical support.",
+    c_addr:"Fener Mah. Tekelioğlu Cad. 1941 St. No:17, Muratpaşa / Antalya, Türkiye",
+    footer:"Antalya, Türkiye — The power of soil, beside the farmer."
+  }
+};
+
+let lang = "tr";
+const langBtn = document.getElementById("langBtn");
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.getAttribute("data-i18n");
+    if(dict[lang][k] !== undefined) el.innerHTML = dict[lang][k];
+  });
+  langBtn.textContent = lang === "tr" ? "EN" : "TR";
+}
+langBtn.addEventListener("click", ()=>{ lang = lang === "tr" ? "en" : "tr"; applyLang(); });
+
+/* ============ TEMA (BEYAZ / SİYAH) ============ */
+const themeBtn = document.getElementById("themeBtn");
+themeBtn.addEventListener("click", ()=>{
+  const root = document.documentElement;
+  root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+});
+
+/* ============ MOBİL MENÜ ============ */
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
+menuBtn.addEventListener("click", ()=> mainNav.classList.toggle("open"));
+mainNav.querySelectorAll("a").forEach(a=>a.addEventListener("click", ()=>mainNav.classList.remove("open")));
+
+/* ============ SCROLL REVEAL ============ */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("show"); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
