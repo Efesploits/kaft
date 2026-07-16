@@ -104,7 +104,7 @@ nav a.navlink:hover{color:var(--accent)}
 .stat b{display:block;font-family:'Archivo Expanded',sans-serif;font-size:1.9rem;color:var(--ink)}
 .stat span{font-size:.82rem;color:var(--ink2);text-transform:uppercase;letter-spacing:.08em}
 .hero-art{position:relative;display:flex;justify-content:center}
-.hero-art svg{width:min(380px,100%);height:auto}
+.hero-art svg{width:min(420px,100%);height:auto}
 
 /* ---------- AÇILIŞ ANİMASYONLARI ---------- */
 /* Başlık: soldan kayarak gelir */
@@ -123,41 +123,27 @@ nav a.navlink:hover{color:var(--accent)}
 .hero-actions{opacity:0;animation:softAppear .8s ease-out 1.5s forwards}
 .hero-stats{opacity:0;animation:softAppear .8s ease-out 1.75s forwards}
 
-/* KAF logo animasyonu:
-   1) mavi kollar yukarıdan aşağıya belirir
-   2) yeşil yapraklar içten dışa büyür
-   3) sarı yay bir daire çizer            */
-@keyframes armReveal{
-  from{clip-path:inset(0 0 100% 0)}
-  to{clip-path:inset(0 0 -10% 0)}
-}
-@keyframes leafGrow{
+/* Logo: taban belirir, halka bir yuvarlak çizer, mavi kollar yukarıdan aşağıya açılır, yeşiller içeriden büyür */
+@keyframes drawLine{to{stroke-dashoffset:0}}
+@keyframes wipeDown{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes growPivot{
   0%{opacity:0;transform:scale(0)}
-  70%{opacity:1;transform:scale(1.12)}
+  70%{opacity:1;transform:scale(1.07)}
   100%{opacity:1;transform:scale(1)}
 }
-@keyframes drawRing{to{stroke-dashoffset:0}}
-.k-arm{
-  clip-path:inset(0 0 100% 0);
-  animation:armReveal 1s cubic-bezier(.4,0,.2,1) forwards;
-}
-.k-arm-l{animation-delay:.35s}
-.k-arm-r{animation-delay:.55s}
-.k-leaf{
-  opacity:0;transform-box:view-box;transform-origin:110px 158px;
-  animation:leafGrow .8s cubic-bezier(.34,1.56,.64,1) forwards;
-}
-.k-leaf-l{animation-delay:1.35s}
-.k-leaf-r{animation-delay:1.55s}
-.k-ring{
-  stroke-dasharray:340;stroke-dashoffset:340;
-  animation:drawRing 1.2s ease-in-out 1.95s forwards;
-}
+.logo-ring{stroke-dasharray:1709;stroke-dashoffset:1709;animation:drawLine 1s ease-out .5s forwards}
+.logo-wipe{transform-box:fill-box;transform-origin:50% 0%;transform:scaleY(0);animation:wipeDown .55s ease-out forwards}
+.wipe-1{animation-delay:.95s}
+.wipe-2{animation-delay:1.2s}
+.wipe-3{animation-delay:1.45s}
+.logo-grow{opacity:0;transform-box:view-box;transform-origin:329.7px 85.8px;animation:growPivot .6s cubic-bezier(.34,1.56,.64,1) forwards}
+.grow-green{animation-delay:1.95s}
+.grow-lime{animation-delay:2.3s}
 
 @media (prefers-reduced-motion:reduce){
   .hero .eyebrow,.hero h1,.hero>div>p,.hero-actions,.hero-stats,
-  .k-arm,.k-leaf,.k-ring{
-    animation:none;opacity:1;transform:none;stroke-dashoffset:0;clip-path:none;
+  .logo-ring,.logo-wipe,.logo-grow{
+    animation:none;opacity:1;transform:none;stroke-dashoffset:0;
   }
 }
 
@@ -349,44 +335,20 @@ footer{padding:34px 6vw;display:flex;justify-content:space-between;gap:16px;flex
   </div>
 
   <div class="hero-art" aria-hidden="true">
-    <!-- KAF Tarım logosu (SVG yeniden çizim) — açılışta parçalar sırayla canlanır -->
-    <svg viewBox="0 0 220 220" fill="none">
-      <defs>
-        <linearGradient id="kBlueL" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#8FC3E4"/><stop offset="1" stop-color="#1E7FBF"/>
-        </linearGradient>
-        <linearGradient id="kBlueR" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#5FA9D6"/><stop offset="1" stop-color="#0F6AAE"/>
-        </linearGradient>
-        <linearGradient id="kGreenL" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0" stop-color="#2F9E4F"/><stop offset="1" stop-color="#A4C93B"/>
-        </linearGradient>
-        <linearGradient id="kGreenR" x1="1" y1="1" x2="0" y2="0">
-          <stop offset="0" stop-color="#2F9E4F"/><stop offset="1" stop-color="#C6D93F"/>
-        </linearGradient>
-        <linearGradient id="kGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#F5C400"/><stop offset="1" stop-color="#D99A00"/>
-        </linearGradient>
-      </defs>
-
-      <!-- 1) MAVİ KOLLAR: yukarıdan aşağıya belirir -->
-      <g transform="translate(110,92) scale(.86) translate(-110,-92)">
-        <g class="k-arm k-arm-l">
-          <path d="M108 26 C74 34 48 62 44 100 C42 122 50 142 64 154 C56 132 56 108 68 88 C78 70 92 56 108 50 Z" fill="url(#kBlueL)"/>
-          <path d="M104 40 C80 50 62 72 60 100 C59 116 64 130 72 140 C68 122 70 104 80 90 C88 77 96 68 106 62 Z" fill="#BBDCEF" opacity=".55"/>
-        </g>
-        <g class="k-arm k-arm-r">
-          <path d="M112 26 C146 34 172 62 176 100 C178 122 170 142 156 154 C164 132 164 108 152 88 C142 70 128 56 112 50 Z" fill="url(#kBlueR)"/>
-          <path d="M116 40 C140 50 158 72 160 100 C161 116 156 130 148 140 C152 122 150 104 140 90 C132 77 124 68 114 62 Z" fill="#8FC3E4" opacity=".45"/>
-        </g>
-      </g>
-
-      <!-- 2) YEŞİL YAPRAKLAR: içten dışa büyür -->
-      <path class="k-leaf k-leaf-l" d="M110 158 C93 152 81 138 77 117 C75 107 77 96 81 89 C98 98 108 117 111 138 C112 146 111 153 110 158 Z" fill="url(#kGreenL)"/>
-      <path class="k-leaf k-leaf-r" d="M110 158 C127 152 139 138 143 117 C145 107 143 96 139 89 C122 98 112 117 109 138 C108 146 109 153 110 158 Z" fill="url(#kGreenR)"/>
-
-      <!-- 3) SARI YAY: bir daire çizer -->
-      <path class="k-ring" d="M32 82 A84 84 0 1 0 188 82" stroke="url(#kGold)" stroke-width="13" stroke-linecap="round"/>
+    <!-- KAF Tarım logosu — açılışta katman katman çizilir -->
+    <svg viewBox="0 0 580 580" fill="none">
+      <!-- 1) sarı halka bir yuvarlak çizer -->
+      <circle class="logo-ring" cx="290" cy="290" r="272" fill="none" stroke="#D6A300" stroke-width="14" stroke-linecap="round" transform="rotate(-90 290 290)"/>
+      <!-- 3) mavi kollar yukarıdan aşağıya belirir -->
+      <clipPath id="clipBlue1"><rect class="logo-wipe wipe-1" x="2" y="80" width="335" height="340"/></clipPath>
+      <clipPath id="clipBlue2"><rect class="logo-wipe wipe-2" x="35" y="80" width="360" height="435"/></clipPath>
+      <clipPath id="clipBlue3"><rect class="logo-wipe wipe-3" x="115" y="80" width="340" height="495"/></clipPath>
+      <path clip-path="url(#clipBlue1)" fill="#A9C6D6" d="M329.7,85.8 C279.9,230.7 155.7,319.9 32.4,327.1 C25.5,327.5 18.5,327.6 11.6,327.5 C14.5,356.7 22.3,385.0 34.3,411.3 C40.4,411.0 46.5,410.5 52.6,409.7 C192.8,393.0 318.7,261.9 329.7,85.8 Z"/>
+      <path clip-path="url(#clipBlue2)" fill="#71B4D0" d="M329.7,85.8 C330.5,267.4 206.6,409.5 62.5,429.4 C56.5,430.2 50.5,430.9 44.4,431.3 C60.1,459.1 80.8,484.2 105.6,505.0 C112.0,503.9 118.4,502.6 124.6,501.0 C280.6,462.2 383.2,277.0 329.7,85.8 Z"/>
+      <path clip-path="url(#clipBlue3)" fill="#369BC7" d="M329.7,85.8 C396.6,275.7 302.9,469.9 146.0,515.6 C139.5,517.5 132.8,519.2 126.1,520.5 C150.3,537.0 177.5,549.8 207.4,557.8 C217.6,560.5 227.8,562.6 238.0,564.1 C247.6,559.8 256.7,555.0 265.5,549.6 C405.6,464.4 444.9,251.6 329.7,85.8 Z"/>
+      <!-- 4) yeşil kısımlar içeriden dışarıya büyür -->
+      <path class="logo-grow grow-green" fill="#3AA459" d="M347.1,91.4 C439.0,237.4 421.8,413.2 327.2,516.4 C403.7,498.1 468.1,439.6 489.9,358.3 C520.3,244.9 456.8,128.4 347.1,91.4 Z"/>
+      <path class="logo-grow grow-lime" fill="#B7C93E" d="M55.3,316.3 C165.9,293.4 270.8,210.6 321.8,84.5 C207.5,60.3 93.0,129.6 62.4,243.8 C55.9,268.1 53.7,292.5 55.3,316.3 Z"/>
     </svg>
   </div>
 </section>
